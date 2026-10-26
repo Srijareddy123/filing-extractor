@@ -1,0 +1,35 @@
+[project]
+name = "filing-extractor"
+version = "0.1.0"
+description = "Structured extraction of loan terms from public SEC 8-K exhibits"
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+filing-extract = "filing_extractor.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["raw", "outputs", "notebooks"]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff.lint.per-file-ignores]
+"src/filing_extractor/rules.py" = ["E501"]
+"src/filing_extractor/prompt.py" = ["E501"]
+"scripts/*" = ["E501"]
+"tests/*" = ["E501"]
