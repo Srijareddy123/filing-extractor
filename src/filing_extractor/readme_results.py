@@ -23,15 +23,9 @@ HEAD = (
     "| Field | Answerable | Exact match | Answer F1 | EM, answerable only | Unresolved rate "
     "| Answerable but unresolved | Answered but unanswerable |"
 )
-HEAD_SHORT = "| Field | Answerable | Exact match | Answer F1 | EM, answerable only |"
 
 
-def _row(name: str, s: dict, full: bool = True) -> str:
-    if not full:
-        return (
-            f"| {name} | {s['n_answerable']} | {s['exact_match']:.3f} | {s['answer_f1']:.3f} | "
-            f"{s['exact_match_answerable']:.3f} |"
-        )
+def _row(name: str, s: dict) -> str:
     return (
         f"| {name} | {s['n_answerable']} | {s['exact_match']:.3f} | {s['answer_f1']:.3f} | "
         f"{s['exact_match_answerable']:.3f} | {s['unresolved_rate']:.3f} | "
@@ -39,8 +33,31 @@ def _row(name: str, s: dict, full: bool = True) -> str:
     )
 
 
+def _compact_block(data: dict, status: dict, split: str) -> str:
+    lines = ["| Extractor | Exact match | Answer F1 | Note |", "|---|---|---|---|"]
+    for model in MODELS:
+        if model in data:
+            entry = data[model]
+            overall = entry["fields"]["overall"]
+            lo, hi = entry["overall_exact_match_ci95"]
+            note = (
+                f"{entry['n_passages']} passages, {entry['n_documents']} documents, {split} split; "
+                f"95% interval over documents {lo:.3f} to {hi:.3f}"
+            )
+            lines.append(
+                f"| {LABELS[model]} | {overall['exact_match']:.3f} | "
+                f"{overall['answer_f1']:.3f} | {note} |"
+            )
+        else:
+            text = _status_text(model, status.get(model, "pending"), short=True)
+            lines.append(f"| {LABELS[model]} | pending | pending | {text} |")
+    return "\n".join(lines) + "\n"
+
+
 def render_block(metrics: dict, split: str = "test", full: bool = True) -> str:
     data = metrics["splits"].get(split, {})
+    if not full:
+        return _compact_block(data, metrics["status"], split)
     lines = []
     for model in MODELS:
         if model in data:
@@ -50,12 +67,12 @@ def render_block(metrics: dict, split: str = "test", full: bool = True) -> str:
                 f"**{LABELS[model]}** ({entry['n_passages']} passages, "
                 f"{entry['n_documents']} documents, {split} split)",
                 "",
-                HEAD if full else HEAD_SHORT,
-                "|" + "|".join("---" for _ in range(8 if full else 5)) + "|",
+                HEAD,
+                "|" + "|".join("---" for _ in range(8)) + "|",
             ]
             for field in (*FIELDS, "overall"):
                 label = f"**{field}**" if field == "overall" else field
-                lines.append(_row(label, entry["fields"][field], full))
+                lines.append(_row(label, entry["fields"][field]))
             lines += [
                 "",
                 f"Overall exact match 95% interval over documents: {lo:.3f} to {hi:.3f}.",
@@ -67,7 +84,11 @@ def render_block(metrics: dict, split: str = "test", full: bool = True) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def _status_text(model: str, status: str) -> str:
+def _status_text(model: str, status: str, short: bool = False) -> str:
+    if short and model == "llm":
+        return "pending, no `ANTHROPIC_API_KEY` was available; run `make eval` with a key"
+    if short and model == "lora":
+        return "pending, needs a GPU and has not been run yet"
     if model == "llm":
         return (
             "pending. No `ANTHROPIC_API_KEY` was available, so no numbers are reported. "

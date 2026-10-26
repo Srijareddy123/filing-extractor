@@ -39,3 +39,14 @@ Overall exact match 95% interval over documents: 0.926 to 0.966.
 3. Maturity, answered but unanswerable (6). Any date after the word "Termination Date" is taken, even when it is the start of an interest payment schedule (`fx0057`, "commencing June 30, 2024").
 
 Missed answers (11) sit mostly in interest margin and financial covenants, where the wording varies the most. Where the tuned model wins or loses, including long agreements against short loan papers (the table under each model in `results/results.md`), is pending the GPU run.
+
+## Background moved from the README
+
+Personal project on public data. Sources are in `data/sources.csv`; labeling rules are in `docs/LABELING_GUIDELINES.md`.
+
+Fuller flow: EDGAR full-text search, download EX-10 exhibits, pick candidate passages, hand labels, split by source document, then rules, prompted LLM or LoRA fine-tune, grounding check, metrics and MLflow, FastAPI `/extract` and batch CLI.
+
+- Qwen2.5 is 0.5B by default and 1.5B in the notebook. MLflow uses SQLite in `outputs/`.
+- Score history: my first score, 0.93 exact match for the rules on training data, was mostly blank equals blank. I added answer F1 and the answerable-but-unresolved and answered-but-unanswerable rates.
+- Margin coverage: a targeted second labeling pass plus 120 smaller loan papers brought interest margin to 30 answers.
+- Rules: training errors caught a lender regex that cut "Bank of America, N.A." to "America, N.A.".

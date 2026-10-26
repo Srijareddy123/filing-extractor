@@ -36,3 +36,8 @@ def test_readme_has_no_banned_style() -> None:
         )
         for bad in banned:
             assert bad not in text.lower()
+
+
+def test_readme_fits_one_screen_before_run_it() -> None:
+    text = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert len(text.split("## Run it", 1)[0].splitlines()) <= 45
