@@ -62,8 +62,28 @@ filing-extract --model rules batch data/sample/demo_input.jsonl out.jsonl
 
 - **Prompted LLM:** put `ANTHROPIC_API_KEY` in `.env` (see `.env.example`) and run `make eval`. Responses are cached in `results/llm_cache.jsonl`, so reruns cost nothing. Tests and the demo use a fake client with canned answers (`data/sample/`), which prove the plumbing and produce no metric.
 - **LoRA smoke test on CPU:** `pip install -r requirements-train.txt && make smoke` (about 30 seconds of training after the 1 GB model download).
-- **LoRA on a free GPU:** open `notebooks/train_lora_colab.ipynb` in Colab or Kaggle with a T4. It trains, scores the adapter next to the rules baseline and zips the results. Unzip them in this repo, run `python -m filing_extractor.readme_results`, and commit. The notebook has not been run on a GPU yet. Set `REPO` in the notebook to this repo's URL.
+- **LoRA on a free GPU:** see "GPU run" below. The LoRA row in Results stays pending until that run has been done.
 - **Refetch the data:** `scripts/find_exhibits.py` and `scripts/download_exhibits.py` read `SEC_USER_AGENT` (your name and email) from `.env` and stay under 7 requests a second. Passage picking and label merging are in `scripts/`; the labels themselves were written by hand.
+
+## GPU run (LoRA fine-tune)
+
+No LoRA number exists yet. The steps below produce it. The notebook's time estimate (about 10 to 20 minutes on a T4 for the 0.5B model) has not been measured.
+
+1. Open https://colab.research.google.com, choose File, Open notebook, GitHub, enter `Srijareddy123/filing-extractor` and open `notebooks/train_lora_colab.ipynb`. (On Kaggle: import the notebook, then Settings, Accelerator, GPU T4.)
+2. Runtime, Change runtime type, T4 GPU. The repo is public, so the notebook's first cell clones it without a token.
+3. Optional: in the model cell, set `MODEL = "Qwen/Qwen2.5-1.5B-Instruct"` instead of the 0.5B default. Optional: set `ANTHROPIC_API_KEY` in the environment before the scoring cell to fill the prompted-LLM row too.
+4. Runtime, Run all. The notebook trains the adapter (`python -m filing_extractor.train_lora`), scores rules, LLM (if a key is set) and LoRA on the val and test splits (`python -m filing_extractor.evaluate --models rules llm lora --splits val test`), writes the LoRA error analysis, and downloads `lora_run.zip` and `lora_adapter.zip`.
+5. On your machine, in a clone of this repo:
+
+```bash
+git pull
+unzip -o ~/Downloads/lora_run.zip            # recreates results/
+python -m filing_extractor.readme_results    # rewrites the README and docs/RESULTS.md tables from results/metrics.json
+make test                                    # checks the tables match results/metrics.json
+git add results README.md docs && git commit -m "Add LoRA results from a GPU run" && git push
+```
+
+6. Read `results/results.md` before you commit. If the LoRA model is worse than the rules baseline, the README should say that.
 
 ## Tests
 
