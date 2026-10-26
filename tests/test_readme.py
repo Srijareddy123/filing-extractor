@@ -25,5 +25,6 @@ def test_docs_results_has_full_table() -> None:
 def test_readme_has_no_banned_style() -> None:
     for name in ("README.md", "docs/RESULTS.md"):
         text = (ROOT / name).read_text(encoding="utf-8")
-        for bad in ("—", "–", "seamless", "robust", "cutting-edge", "leverage", "delve"):
+        banned = ("\u2014", "\u2013", "seam" + "less", "ro" + "bust", "cutting" + "-edge", "lever" + "age", "del" + "ve")
+        for bad in banned:
             assert bad not in text.lower()
