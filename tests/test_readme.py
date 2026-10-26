@@ -12,10 +12,18 @@ def test_readme_block_matches_metrics_json() -> None:
     metrics = json.loads((ROOT / "results" / "metrics.json").read_text(encoding="utf-8"))
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     block = readme.split(START, 1)[1].split(END, 1)[0].strip("\n")
-    assert block == render_block(metrics).strip("\n")
+    assert block == render_block(metrics, full=False).strip("\n")
+
+
+def test_docs_results_has_full_table() -> None:
+    metrics = json.loads((ROOT / "results" / "metrics.json").read_text(encoding="utf-8"))
+    doc = (ROOT / "docs" / "RESULTS.md").read_text(encoding="utf-8")
+    block = doc.split(START, 1)[1].split(END, 1)[0].strip("\n")
+    assert block == render_block(metrics, full=True).strip("\n")
 
 
 def test_readme_has_no_banned_style() -> None:
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for bad in ("—", "–", "seamless", "robust", "cutting-edge", "leverage", "delve"):
-        assert bad not in readme.lower()
+    for name in ("README.md", "docs/RESULTS.md"):
+        text = (ROOT / name).read_text(encoding="utf-8")
+        for bad in ("—", "–", "seamless", "robust", "cutting-edge", "leverage", "delve"):
+            assert bad not in text.lower()

@@ -3,25 +3,25 @@
 **Description:** Extracts loan terms from public SEC 8-K credit agreement exhibits into a typed schema, with rules, prompted-LLM and LoRA fine-tune baselines.
 **Topics:** `information-extraction`, `lora`, `fine-tuning`, `sec-edgar`, `pydantic`, `mlflow`, `fastapi`, `nlp`
 
-filing-extractor pulls five loan terms (facility size, maturity, interest margin, lender, financial covenants) out of credit agreement text in public SEC 8-K exhibits, for ML and data teams that need structured fields instead of PDFs. A field the text does not support is marked `unresolved` instead of guessed. It is a personal project on public data.
+Pulls five loan terms (facility size, maturity, interest margin, lender, financial covenants) out of public SEC 8-K credit agreement text for ML and data teams, and marks a field `unresolved` when the text does not support it. Personal project on public data.
 
 ![make demo output](docs/demo.png)
 
 ## Results
 
-Test split: 86 labeled passages from 27 documents held out from training and from rule writing. Command: `make eval` (writes `results/`). Exact match counts "unresolved" on an unresolved field as correct, and 44% of passages have no answer, so read the answer-level columns too: Answer F1 looks only at predicted values, "EM, answerable only" only at passages that have an answer.
+86 held-out test passages from 27 documents. Command: `make eval`. 44% of passages have no answer, so "unresolved" counts as correct in Exact match; read Answer F1 too. Per-field detail, caveats and error analysis: [docs/RESULTS.md](docs/RESULTS.md).
 
 <!-- results:start -->
 **Rules (regex)** (86 passages, 27 documents, test split)
 
-| Field | Answerable | Exact match | Answer F1 | EM, answerable only | Unresolved rate | Answerable but unresolved | Answered but unanswerable |
-|---|---|---|---|---|---|---|---|
-| facility_size | 10 | 0.884 | 0.621 | 0.900 | 0.779 | 0.000 | 0.118 |
-| maturity | 7 | 0.977 | 0.875 | 1.000 | 0.895 | 0.000 | 0.025 |
-| interest_margin | 5 | 0.942 | 0.545 | 0.600 | 0.930 | 0.400 | 0.037 |
-| lender | 12 | 0.977 | 0.870 | 0.833 | 0.872 | 0.083 | 0.000 |
-| financial_covenants | 5 | 0.953 | 0.500 | 0.400 | 0.965 | 0.600 | 0.012 |
-| **overall** | 39 | 0.947 | 0.713 | 0.795 | 0.888 | 0.154 | 0.038 |
+| Field | Answerable | Exact match | Answer F1 | EM, answerable only |
+|---|---|---|---|---|
+| facility_size | 10 | 0.884 | 0.621 | 0.900 |
+| maturity | 7 | 0.977 | 0.875 | 1.000 |
+| interest_margin | 5 | 0.942 | 0.545 | 0.600 |
+| lender | 12 | 0.977 | 0.870 | 0.833 |
+| financial_covenants | 5 | 0.953 | 0.500 | 0.400 |
+| **overall** | 39 | 0.947 | 0.713 | 0.795 |
 
 Overall exact match 95% interval over documents: 0.926 to 0.966.
 
@@ -29,19 +29,6 @@ Overall exact match 95% interval over documents: 0.926 to 0.966.
 
 **LoRA fine-tuned small model**: pending. Training needs a GPU and has not been run yet; the CPU smoke test only checks that the code runs. Numbers appear here after the GPU run.
 <!-- results:end -->
-
-- **Prompted LLM and LoRA rows are pending on purpose.** No Anthropic key was available here and there is no GPU on this machine. No number is shown until a run produces one.
-- The CPU smoke test (`make smoke`, `results/smoke_train_summary.json`) trains 6 steps on 12 passages to check that the training and inference code runs. Its loss went from 0.793 to 0.033 in 28 seconds. That says nothing about quality.
-- The test split has 5 to 12 answers per field. A difference of a few points between two models is inside the noise; the interval above resamples whole documents.
-- Rules were written after reading the training and validation errors. I also labeled the test passages, so the rules row is mildly optimistic.
-
-**Error analysis** (rules, validation and test, 48 wrong pairs out of 830; `results/error_analysis_rules.md` has every count and more examples):
-
-1. Facility size, answered but unanswerable (18). The regex finds a dollar amount near the word "commitment" and takes it, but it is a sublimit, a participation threshold or a letter of credit commitment, not the facility (`fx0012`: "LC Commitment means ... $50,000,000").
-2. Interest margin, answered but unanswerable (6). It reads a percentage from a Base Rate definition or a fee, such as "Term SOFR plus 1.00%" inside a definition (`fx0032`).
-3. Maturity, answered but unanswerable (6). Any date after the word "Termination Date" is taken, even when it is the start of an interest payment schedule (`fx0057`, "commencing June 30, 2024").
-
-Missed answers (11) sit mostly in interest margin and financial covenants, where the wording varies the most. Where the tuned model wins or loses, including long agreements against short loan papers (the table under each model in `results/results.md`), is pending the GPU run.
 
 ## How it works
 
@@ -61,19 +48,18 @@ flowchart LR
     G --> I[FastAPI /extract and batch CLI]
 ```
 
-- `data/passages.jsonl` holds 480 passages from 180 exhibits (public EDGAR text, source links in `data/sources.csv`), labeled by hand with the rules in `docs/LABELING_GUIDELINES.md`. Splits are by document: 126, 27 and 27 documents.
-- Three extractors share one interface. Rules are regexes. The LLM baseline forces a tool call whose schema is the Pydantic model. The LoRA model is Qwen2.5 (0.5B by default, 1.5B in the notebook) fine-tuned with Transformers and PEFT to write the JSON answer.
-- Every prediction goes through a grounding check: a value that is not found verbatim in the passage becomes `unresolved`.
-- Evaluation runs and LoRA training runs log parameters and metrics to MLflow (SQLite file in `outputs/`; `mlflow ui --backend-store-uri sqlite:///outputs/mlflow.db`).
-- `/extract` and the batch CLI pick the extractor with `FX_MODEL` or `--model`. The default is `rules`, the only model with measured numbers so far. After the GPU run, set `FX_MODEL=lora` if it wins.
+- `data/passages.jsonl` holds 480 passages from 180 exhibits (sources in `data/sources.csv`), labeled by hand with `docs/LABELING_GUIDELINES.md`. Splits are by document: 126, 27 and 27.
+- Three extractors share one interface: regex rules, an LLM forced to call a tool whose schema is the Pydantic model, and Qwen2.5 (0.5B by default, 1.5B in the notebook) fine-tuned with PEFT.
+- A grounding check turns any value not found verbatim in the passage into `unresolved`.
+- Runs log to MLflow (SQLite in `outputs/`). `/extract` and the batch CLI pick the extractor with `FX_MODEL` or `--model`; the default is `rules`, the only one with measured numbers so far.
 
 ## Design choices
 
-1. **Verbatim spans, not normalized values.** I considered normalizing to numbers and ISO dates. I kept spans copied from the text, because a label can then be checked by machine (`tests/test_dataset.py` does it for all 480 passages) and a model cannot invent a value without the grounding check catching it.
-2. **`unresolved` is a value, and the metrics treat it that way.** My first scoring script reported 0.93 overall exact match for the rules on training data. Most of that was blank-equals-blank. I added answer precision, recall and F1, the answerable-but-unresolved rate and the answered-but-unanswerable rate.
-3. **Second labeling pass for rare fields.** The first random pass over the documents gave only 8 interest margin answers in about 490 passages, because pricing is mostly in grids. A second pass picked passages with rate and size wording, and 120 smaller loan papers were added to the pool. Margin ended with 30 answers, still the thinnest field.
-4. **Split by document, interval by document.** Amendments of one agreement repeat the same paragraphs, so a passage split would leak. The bootstrap resamples documents for the same reason.
-5. **Rules first, then models.** The rules baseline is the number any model has to beat. My first lender regex cut "Bank of America, N.A." to "America, N.A."; I caught it in the training errors and fixed it.
+1. **Verbatim spans, not normalized values.** I considered numbers and ISO dates and kept spans copied from the text, so labels are machine-checkable and a model cannot invent a value past the grounding check.
+2. **`unresolved` is a value.** My first score, 0.93 exact match for the rules on training data, was mostly blank equals blank. I added answer F1 and the answerable-but-unresolved and answered-but-unanswerable rates.
+3. **Second labeling pass for rare fields.** A random pass found only 8 interest margin answers in about 490 passages. A targeted second pass and 120 smaller loan papers brought margin to 30, still the thinnest field.
+4. **Split and bootstrap by document.** Amendments repeat paragraphs, so a passage split would leak.
+5. **Rules first.** They are the number any model has to beat; training errors caught a lender regex that cut "Bank of America, N.A." to "America, N.A.".
 
 ## Run it
 

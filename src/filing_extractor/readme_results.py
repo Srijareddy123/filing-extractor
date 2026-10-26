@@ -23,9 +23,15 @@ HEAD = (
     "| Field | Answerable | Exact match | Answer F1 | EM, answerable only | Unresolved rate "
     "| Answerable but unresolved | Answered but unanswerable |"
 )
+HEAD_SHORT = "| Field | Answerable | Exact match | Answer F1 | EM, answerable only |"
 
 
-def _row(name: str, s: dict) -> str:
+def _row(name: str, s: dict, full: bool = True) -> str:
+    if not full:
+        return (
+            f"| {name} | {s['n_answerable']} | {s['exact_match']:.3f} | {s['answer_f1']:.3f} | "
+            f"{s['exact_match_answerable']:.3f} |"
+        )
     return (
         f"| {name} | {s['n_answerable']} | {s['exact_match']:.3f} | {s['answer_f1']:.3f} | "
         f"{s['exact_match_answerable']:.3f} | {s['unresolved_rate']:.3f} | "
@@ -33,7 +39,7 @@ def _row(name: str, s: dict) -> str:
     )
 
 
-def render_block(metrics: dict, split: str = "test") -> str:
+def render_block(metrics: dict, split: str = "test", full: bool = True) -> str:
     data = metrics["splits"].get(split, {})
     lines = []
     for model in MODELS:
@@ -44,12 +50,12 @@ def render_block(metrics: dict, split: str = "test") -> str:
                 f"**{LABELS[model]}** ({entry['n_passages']} passages, "
                 f"{entry['n_documents']} documents, {split} split)",
                 "",
-                HEAD,
-                "|" + "|".join("---" for _ in range(8)) + "|",
+                HEAD if full else HEAD_SHORT,
+                "|" + "|".join("---" for _ in range(8 if full else 5)) + "|",
             ]
             for field in (*FIELDS, "overall"):
                 label = f"**{field}**" if field == "overall" else field
-                lines.append(_row(label, entry["fields"][field]))
+                lines.append(_row(label, entry["fields"][field], full))
             lines += [
                 "",
                 f"Overall exact match 95% interval over documents: {lo:.3f} to {hi:.3f}.",
@@ -75,11 +81,11 @@ def _status_text(model: str, status: str) -> str:
     return status
 
 
-def update_readme(readme: Path, metrics: dict) -> bool:
+def update_readme(readme: Path, metrics: dict, full: bool = False) -> bool:
     text = readme.read_text(encoding="utf-8")
     head, _, rest = text.partition(START)
     _, _, tail = rest.partition(END)
-    new = f"{head}{START}\n{render_block(metrics)}{END}{tail}"
+    new = f"{head}{START}\n{render_block(metrics, full=full)}{END}{tail}"
     if new != text:
         readme.write_text(new, encoding="utf-8")
         return True
@@ -89,7 +95,9 @@ def update_readme(readme: Path, metrics: dict) -> bool:
 def main() -> None:
     metrics = json.loads((ROOT / "results" / "metrics.json").read_text(encoding="utf-8"))
     changed = update_readme(ROOT / "README.md", metrics)
+    changed_docs = update_readme(ROOT / "docs" / "RESULTS.md", metrics, full=True)
     print("README results block", "updated" if changed else "already current")
+    print("docs/RESULTS.md table", "updated" if changed_docs else "already current")
 
 
 if __name__ == "__main__":
