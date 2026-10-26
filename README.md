@@ -1,6 +1,6 @@
 # filing-extractor
 
-Pulls five loan terms (facility size, maturity, interest margin, lender, financial covenants) out of public SEC 8-K credit agreement text for ML and data teams, and marks a field `unresolved` when the text does not support it.
+A personal project that pulls five loan terms (facility size, maturity, interest margin, lender, financial covenants) out of public SEC 8-K credit agreement text for ML and data teams, and marks a field `unresolved` when the text does not support it.
 
 **Topics:** `information-extraction`, `lora`, `fine-tuning`, `sec-edgar`, `pydantic`, `mlflow`, `fastapi`, `nlp`
 
