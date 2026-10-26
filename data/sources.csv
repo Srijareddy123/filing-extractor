@@ -1,0 +1,181 @@
+doc_id,company,exhibit_type,filed,split,doc_chars,url
+0000008947-23-000162__secondamendmenttocreditagr,AZZ INC,EX-10.1,2023-12-21,val,24024,https://www.sec.gov/Archives/edgar/data/8947/000000894723000162/secondamendmenttocreditagr.htm
+0000017313-23-000076__cswc-ex1013arcreditagreeme,CAPITAL SOUTHWEST CORP,EX-10.1,2023-08-02,train,590782,https://www.sec.gov/Archives/edgar/data/17313/000001731323000076/cswc-ex1013arcreditagreeme.htm
+0000039911-22-000058__gap-fourtharablcreditagr,GAP INC,EX-10.1,2022-07-13,train,907719,https://www.sec.gov/Archives/edgar/data/39911/000003991122000058/gap-fourtharablcreditagr.htm
+0000048465-25-000015__ex101-creditagreement03x,HORMEL FOODS CORP /DE/,EX-10.1,2025-03-26,train,458224,https://www.sec.gov/Archives/edgar/data/48465/000004846525000015/ex101-creditagreement03x.htm
+0000052827-22-000149__fifthamendmenttocreditagre,RAYONIER INC,EX-10.1,2022-12-19,val,510361,https://www.sec.gov/Archives/edgar/data/52827/000005282722000149/fifthamendmenttocreditagre.htm
+0000052827-25-000172__amendedandrestatedcreditag,RAYONIER INC,EX-10.1,2025-08-20,val,525400,https://www.sec.gov/Archives/edgar/data/52827/000005282725000172/amendedandrestatedcreditag.htm
+0000054381-22-000037__kaman_amendmenttocreditand,KAMAN Corp,EX-10.1,2022-05-31,train,26706,https://www.sec.gov/Archives/edgar/data/54381/000005438122000037/kaman_amendmenttocreditand.htm
+0000076605-24-000177__ex-101xpatkxfiftharcredita,PATRICK INDUSTRIES INC,EX-10.1,2024-10-28,train,635068,https://www.sec.gov/Archives/edgar/data/76605/000007660524000177/ex-101xpatkxfiftharcredita.htm
+0000091767-24-000032__amendedandrestatedcreditag,SONOCO PRODUCTS CO,EX-10.1,2024-05-07,val,391983,https://www.sec.gov/Archives/edgar/data/91767/000009176724000032/amendedandrestatedcreditag.htm
+0000277509-22-000042__thirdamendedandrestatedc,FEDERAL SIGNAL CORP /DE/,EX-10.1,2022-10-24,train,614621,https://www.sec.gov/Archives/edgar/data/277509/000027750922000042/thirdamendedandrestatedc.htm
+0000353184-22-000021__a103supplementtoloanagreem,AIR T INC,EX-10.3,2022-02-22,val,11811,https://www.sec.gov/Archives/edgar/data/353184/000035318422000021/a103supplementtoloanagreem.htm
+0000353184-22-000021__a104promissorynotetermhwor,AIR T INC,EX-10.4,2022-02-22,val,15052,https://www.sec.gov/Archives/edgar/data/353184/000035318422000021/a104promissorynotetermhwor.htm
+0000707388-24-000028__kbsandkeybankloanagreement,"STAR EQUITY HOLDINGS, INC.",EX-10.1,2024-04-26,test,111030,https://www.sec.gov/Archives/edgar/data/707388/000070738824000028/kbsandkeybankloanagreement.htm
+0000711404-24-000024__a2024creditagreement,"COOPER COMPANIES, INC.",EX-10.1,2024-05-01,train,457752,https://www.sec.gov/Archives/edgar/data/711404/000071140424000024/a2024creditagreement.htm
+0000763744-25-000046__a2025creditagreement,LCI INDUSTRIES,EX-10.1,2025-03-25,train,737659,https://www.sec.gov/Archives/edgar/data/763744/000076374425000046/a2025creditagreement.htm
+0000790051-24-000081__ex-101xfiftharcreditagreem,CARLISLE COMPANIES INC,EX-10.1,2024-04-03,val,433618,https://www.sec.gov/Archives/edgar/data/790051/000079005124000081/ex-101xfiftharcreditagreem.htm
+0000794619-24-000092__ex102creditagreement,AMERICAN WOODMARK CORP,EX-10.2,2024-10-15,val,555556,https://www.sec.gov/Archives/edgar/data/794619/000079461924000092/ex102creditagreement.htm
+0000805928-23-000075__amendmentno1totermloanag,"Axogen, Inc.",EX-10.1,2023-06-30,train,336030,https://www.sec.gov/Archives/edgar/data/805928/000080592823000075/amendmentno1totermloanag.htm
+0000821026-22-000089__secondincrementaltermloana,"Andersons, Inc.",EX-10.1,2022-03-10,test,20442,https://www.sec.gov/Archives/edgar/data/821026/000082102622000089/secondincrementaltermloana.htm
+0000821026-22-000115__creditagreementforamendmen,"Andersons, Inc.",EX-10.1,2022-04-01,test,470974,https://www.sec.gov/Archives/edgar/data/821026/000082102622000115/creditagreementforamendmen.htm
+0000842633-25-000073__ex101creditagreement,TRIMAS CORP,EX-10.1,2025-04-01,test,664876,https://www.sec.gov/Archives/edgar/data/842633/000084263325000073/ex101creditagreement.htm
+0000864749-22-000205__exhibit102-amendedcreditag,TRIMBLE INC.,EX-10.2,2022-12-30,train,546353,https://www.sec.gov/Archives/edgar/data/864749/000086474922000205/exhibit102-amendedcreditag.htm
+0000885508-24-000074__kingwoodplace-loanagreemen,STRATUS PROPERTIES INC,EX-10.1,2024-11-26,test,271196,https://www.sec.gov/Archives/edgar/data/885508/000088550824000074/kingwoodplace-loanagreemen.htm
+0000897077-22-000114__thirdarcreditagreement-a,ALAMO GROUP INC,EX-10.1,2022-10-31,train,524385,https://www.sec.gov/Archives/edgar/data/897077/000089707722000114/thirdarcreditagreement-a.htm
+0000897101-23-000240__pegy230658_ex10-2,Pineapple Energy Inc.,EX-10.2,2023-06-06,train,30798,https://www.sec.gov/Archives/edgar/data/22701/000089710123000240/pegy230658_ex10-2.htm
+0000908311-25-000023__termloanagreementcomerica-,Creative Media & Community Trust Corp,EX-10.1,2025-04-09,test,118778,https://www.sec.gov/Archives/edgar/data/908311/000090831125000023/termloanagreementcomerica-.htm
+0000913760-22-000070__snexsixthamendmenttocredit,StoneX Group Inc.,EX-10.1,2022-04-27,train,508419,https://www.sec.gov/Archives/edgar/data/913760/000091376022000070/snexsixthamendmenttocredit.htm
+0000918541-25-000003__exhibit101creditagreementp,NN INC,EX-10.1,2025-01-02,train,542137,https://www.sec.gov/Archives/edgar/data/918541/000091854125000003/exhibit101creditagreementp.htm
+0000918541-25-000041__exhibit101termloansixthame,NN INC,EX-10.1,2025-04-02,train,16955,https://www.sec.gov/Archives/edgar/data/918541/000091854125000041/exhibit101termloansixthame.htm
+0000920371-22-000067__exhibit101-arcreditagree,"Simpson Manufacturing Co., Inc.",EX-10.1,2022-04-04,train,767474,https://www.sec.gov/Archives/edgar/data/920371/000092037122000067/exhibit101-arcreditagree.htm
+0000945841-23-000107__secondamendmenttosecondand,POOL CORP,EX-10.1,2023-07-05,test,603802,https://www.sec.gov/Archives/edgar/data/945841/000094584123000107/secondamendmenttosecondand.htm
+0000945841-24-000149__thirdamendedandrestatedcre,POOL CORP,EX-10.1,2024-10-02,train,608150,https://www.sec.gov/Archives/edgar/data/945841/000094584124000149/thirdamendedandrestatedcre.htm
+0000945841-25-000117__fourthamendedandrestatedcr,POOL CORP,EX-10.1,2025-07-14,test,614769,https://www.sec.gov/Archives/edgar/data/945841/000094584125000117/fourthamendedandrestatedcr.htm
+0000947871-22-000359__ss860828_ex1001,AMERICAN AXLE & MANUFACTURING HOLDINGS INC,EX-10.1,2022-03-14,val,629032,https://www.sec.gov/Archives/edgar/data/1062231/000094787122000359/ss860828_ex1001.htm
+0000947871-23-000311__ss1849200_ex1001,Paramount Global,EX-10.1,2023-03-09,train,383603,https://www.sec.gov/Archives/edgar/data/813828/000094787123000311/ss1849200_ex1001.htm
+0000947871-23-000708__ss2230728_ex1001,"DT Midstream, Inc.",EX-10.1,2023-06-29,train,659332,https://www.sec.gov/Archives/edgar/data/1842022/000094787123000708/ss2230728_ex1001.htm
+0000947871-23-000709__ss2232555_1001,AMERICAN AXLE & MANUFACTURING HOLDINGS INC,EX-10.1,2023-06-29,val,31835,https://www.sec.gov/Archives/edgar/data/1062231/000094787123000709/ss2232555_1001.htm
+0000947871-24-000490__ss3393516_ex1001,DYCOM INDUSTRIES INC,EX-10.1,2024-05-17,test,571735,https://www.sec.gov/Archives/edgar/data/67215/000094787124000490/ss3393516_ex1001.htm
+0000947871-24-000962__ss4172469_ex1001,"DT Midstream, Inc.",EX-10.1,2024-11-27,train,21147,https://www.sec.gov/Archives/edgar/data/1842022/000094787124000962/ss4172469_ex1001.htm
+0000947871-24-001003__ss4232708_ex1001,"DT Midstream, Inc.",EX-10.1,2024-12-12,train,653824,https://www.sec.gov/Archives/edgar/data/1842022/000094787124001003/ss4232708_ex1001.htm
+0000950157-22-000927__ex10-1,MINERALS TECHNOLOGIES INC,EX-10.1,2022-08-11,train,720644,https://www.sec.gov/Archives/edgar/data/891014/000095015722000927/ex10-1.htm
+0000950157-24-000289__ex10-1,US Foods Holding Corp.,EX-10.1,2024-02-29,train,638480,https://www.sec.gov/Archives/edgar/data/1665918/000095015724000289/ex10-1.htm
+0000950157-24-001314__ex10-1,Viatris Inc,EX-10.1,2024-09-27,train,510981,https://www.sec.gov/Archives/edgar/data/1792044/000095015724001314/ex10-1.htm
+0001008654-22-000063__tupwf2ndamendcreditfacil,TUPPERWARE BRANDS CORP,EX-10.1,2022-12-22,train,719021,https://www.sec.gov/Archives/edgar/data/1008654/000100865422000063/tupwf2ndamendcreditfacil.htm
+0001008654-23-000005__exhibit101creditagreemen,TUPPERWARE BRANDS CORP,EX-10.1,2023-02-28,train,703393,https://www.sec.gov/Archives/edgar/data/1008654/000100865423000005/exhibit101creditagreemen.htm
+0001013762-23-004867__ea186826ex10-1_nrireal,"NRI Real Estate Investment & Technology, Inc.",EX-10.1,2023-10-18,train,59373,https://www.sec.gov/Archives/edgar/data/1877561/000101376223004867/ea186826ex10-1_nrireal.htm
+0001015328-22-000148__ex101fifthamendmenttocredi,WINTRUST FINANCIAL CORP,EX-10.1,2022-09-15,train,14155,https://www.sec.gov/Archives/edgar/data/1015328/000101532822000148/ex101fifthamendmenttocredi.htm
+0001015328-24-000269__ex101thirdamendmenttoamend,WINTRUST FINANCIAL CORP,EX-10.1,2024-12-10,val,34698,https://www.sec.gov/Archives/edgar/data/1015328/000101532824000269/ex101thirdamendmenttoamend.htm
+0001032220-24-000067__maximus-amendedcreditagree,"MAXIMUS, INC.",EX-10.1,2024-06-04,train,711412,https://www.sec.gov/Archives/edgar/data/1032220/000103222024000067/maximus-amendedcreditagree.htm
+0001039399-25-000077__ex101-creditagreementxform,FORMFACTOR INC,EX-10.1,2025-07-30,val,588259,https://www.sec.gov/Archives/edgar/data/1039399/000103939925000077/ex101-creditagreementxform.htm
+0001056903-22-000043__exhibit101awrcreditfacilit,AMERICAN STATES WATER CO,EX-10.1,2022-04-26,val,523279,https://www.sec.gov/Archives/edgar/data/1056903/000105690322000043/exhibit101awrcreditfacilit.htm
+0001072613-23-000502__exh10-2_18762,EMPIRE PETROLEUM CORP,EX-10.2,2023-09-25,train,11679,https://www.sec.gov/Archives/edgar/data/887396/000107261323000502/exh10-2_18762.htm
+0001079973-24-001167__ex_10z2,PRO DEX INC,EX-10.2,2024-08-05,train,27776,https://www.sec.gov/Archives/edgar/data/788920/000107997324001167/ex_10z2.htm
+0001079973-25-001185__ex10x2,BION ENVIRONMENTAL TECHNOLOGIES INC,EX-10.2,2025-07-24,test,16602,https://www.sec.gov/Archives/edgar/data/875729/000107997325001185/ex10x2.htm
+0001091883-22-000022__ex101-40822xcreditamendment,CIRCOR INTERNATIONAL INC,EX-10.1,2022-04-13,train,669925,https://www.sec.gov/Archives/edgar/data/1091883/000109188322000022/ex101-40822xcreditamendment.htm
+0001104659-22-075241__tm2219600d1_ex10-1,"B&G Foods, Inc.",EX-10.1,2022-06-28,val,532940,https://www.sec.gov/Archives/edgar/data/1278027/000110465922075241/tm2219600d1_ex10-1.htm
+0001104659-23-068576__tm2317915d1_ex10-1,"B&G Foods, Inc.",EX-10.1,2023-06-06,train,540317,https://www.sec.gov/Archives/edgar/data/1278027/000110465923068576/tm2317915d1_ex10-1.htm
+0001104659-24-079703__tm2419385d1_ex10-1,"B&G Foods, Inc.",EX-10.1,2024-07-15,test,576842,https://www.sec.gov/Archives/edgar/data/1278027/000110465924079703/tm2419385d1_ex10-1.htm
+0001135428-22-000046__ex-101,AGTB Private BDC,EX-10.1,2022-06-16,train,548301,https://www.sec.gov/Archives/edgar/data/1913721/000113542822000046/ex-101.htm
+0001174922-23-000111__wynn-amendmentno3tocredita,WYNN RESORTS LTD,EX-10.1,2023-05-17,train,39248,https://www.sec.gov/Archives/edgar/data/1174922/000117492223000111/wynn-amendmentno3tocredita.htm
+0001174922-25-000095__wynn-amendmentno5tocredita,WYNN RESORTS LTD,EX-10.1,2025-06-12,train,53237,https://www.sec.gov/Archives/edgar/data/1174922/000117492225000095/wynn-amendmentno5tocredita.htm
+0001193125-22-046718__d264501dex101,Goldman Sachs Private Middle Market Credit II LLC,EX-10.1,2022-02-18,train,406455,https://www.sec.gov/Archives/edgar/data/1772704/000119312522046718/d264501dex101.htm
+0001193125-22-285821__d348821dex101,Goldman Sachs Middle Market Lending Corp. II,EX-10.1,2022-11-15,train,481595,https://www.sec.gov/Archives/edgar/data/1865174/000119312522285821/d348821dex101.htm
+0001193125-22-309152__d434301dex101,LEGGETT & PLATT INC,EX-10.1,2022-12-20,train,426023,https://www.sec.gov/Archives/edgar/data/58492/000119312522309152/d434301dex101.htm
+0001193125-23-263116__d482533dex101,"ALTRIA GROUP, INC.",EX-10.1,2023-10-25,train,249483,https://www.sec.gov/Archives/edgar/data/764180/000119312523263116/d482533dex101.htm
+0001193125-24-076534__d794117dex101,LEGGETT & PLATT INC,EX-10.1,2024-03-25,train,413960,https://www.sec.gov/Archives/edgar/data/58492/000119312524076534/d794117dex101.htm
+0001206264-23-000196__exhibit101creditagreement,"TEMPUR SEALY INTERNATIONAL, INC.",EX-10.1,2023-10-11,train,603119,https://www.sec.gov/Archives/edgar/data/1206264/000120626423000196/exhibit101creditagreement.htm
+0001206264-24-000044__exhibit101amendmentno1tocr,"TEMPUR SEALY INTERNATIONAL, INC.",EX-10.1,2024-02-08,train,649518,https://www.sec.gov/Archives/edgar/data/1206264/000120626424000044/exhibit101amendmentno1tocr.htm
+0001206264-24-000150__exhibit101amendmentno2tocr,"TEMPUR SEALY INTERNATIONAL, INC.",EX-10.1,2024-10-25,train,644221,https://www.sec.gov/Archives/edgar/data/1206264/000120626424000150/exhibit101amendmentno2tocr.htm
+0001206774-22-001480__corning4070011-ex101,CORNING INC /NY,EX-10.1,2022-06-07,train,341635,https://www.sec.gov/Archives/edgar/data/24741/000120677422001480/corning4070011-ex101.htm
+0001206774-24-000784__dva4366031-ex101,DAVITA INC.,EX-10.1,2024-08-14,test,668292,https://www.sec.gov/Archives/edgar/data/927066/000120677424000784/dva4366031-ex101.htm
+0001213900-22-010246__ea156399ex10-1_halloffame,Hall of Fame Resort & Entertainment Co,EX-10.1,2022-03-02,train,104301,https://www.sec.gov/Archives/edgar/data/1708176/000121390022010246/ea156399ex10-1_halloffame.htm
+0001213900-22-024094__ea159418ex10-1_augmedixinc,"Augmedix, Inc.",EX-10.1,2022-05-05,train,201739,https://www.sec.gov/Archives/edgar/data/1769804/000121390022024094/ea159418ex10-1_augmedixinc.htm
+0001213900-22-037983__ea162436ex10-1_archaea,Archaea Energy Inc.,EX-10.1,2022-07-07,val,646339,https://www.sec.gov/Archives/edgar/data/1823766/000121390022037983/ea162436ex10-1_archaea.htm
+0001213900-22-063021__ea166914ex10-3_nextplay,NextPlay Technologies Inc.,EX-10.3,2022-10-11,val,12410,https://www.sec.gov/Archives/edgar/data/1372183/000121390022063021/ea166914ex10-3_nextplay.htm
+0001213900-22-068053__ea167871ex10-1_zedgeinc,"Zedge, Inc.",EX-10.1,2022-11-01,train,112005,https://www.sec.gov/Archives/edgar/data/1667313/000121390022068053/ea167871ex10-1_zedgeinc.htm
+0001213900-22-070608__ea168342ex10-1_oneliberty,ONE LIBERTY PROPERTIES INC,EX-10.1,2022-11-09,test,56517,https://www.sec.gov/Archives/edgar/data/712770/000121390022070608/ea168342ex10-1_oneliberty.htm
+0001213900-23-009834__ea172957ex10-1_digerati,"Digerati Technologies, Inc.",EX-10.1,2023-02-09,test,73544,https://www.sec.gov/Archives/edgar/data/1014052/000121390023009834/ea172957ex10-1_digerati.htm
+0001213900-23-010499__ea173299ex10-8_1847hold,1847 Holdings LLC,EX-10.8,2023-02-13,train,195888,https://www.sec.gov/Archives/edgar/data/1599407/000121390023010499/ea173299ex10-8_1847hold.htm
+0001213900-23-013019__ea173932ex10-1_purpleinnov,"Purple Innovation, Inc.",EX-10.1,2023-02-21,val,623224,https://www.sec.gov/Archives/edgar/data/1643953/000121390023013019/ea173932ex10-1_purpleinnov.htm
+0001213900-23-022116__ea175381ex10-9_halloffame,Hall of Fame Resort & Entertainment Co,EX-10.9,2023-03-22,test,18159,https://www.sec.gov/Archives/edgar/data/1708176/000121390023022116/ea175381ex10-9_halloffame.htm
+0001213900-23-048735__ea179917ex10-1_augmedix,"Augmedix, Inc.",EX-10.1,2023-06-14,train,42917,https://www.sec.gov/Archives/edgar/data/1769804/000121390023048735/ea179917ex10-1_augmedix.htm
+0001213900-23-058672__ea182107ex10-3_immucell,IMMUCELL CORP /DE/,EX-10.3,2023-07-21,train,4894,https://www.sec.gov/Archives/edgar/data/811641/000121390023058672/ea182107ex10-3_immucell.htm
+0001213900-23-067716__ea183628ex10-1_bantec,"Bantec, Inc.",EX-10.1,2023-08-15,train,13756,https://www.sec.gov/Archives/edgar/data/1704795/000121390023067716/ea183628ex10-1_bantec.htm
+0001213900-23-069384__ea183921ex10-1_digeratitech,"Digerati Technologies, Inc.",EX-10.1,2023-08-21,train,15918,https://www.sec.gov/Archives/edgar/data/1014052/000121390023069384/ea183921ex10-1_digeratitech.htm
+0001213900-24-011691__ea193153ex10-3_digerati,"Digerati Technologies, Inc.",EX-10.3,2024-02-08,val,20059,https://www.sec.gov/Archives/edgar/data/1014052/000121390024011691/ea193153ex10-3_digerati.htm
+0001213900-24-045937__ea020668601ex10-1_gcmgros,GCM Grosvenor Inc.,EX-10.1,2024-05-22,val,932521,https://www.sec.gov/Archives/edgar/data/1819796/000121390024045937/ea020668601ex10-1_gcmgros.htm
+0001213900-24-067129__ea021090601ex10-1_1847hold,1847 Holdings LLC,EX-10.1,2024-08-09,train,285743,https://www.sec.gov/Archives/edgar/data/1599407/000121390024067129/ea021090601ex10-1_1847hold.htm
+0001213900-24-071183__ea021195001ex10-44_siebert,SIEBERT FINANCIAL CORP,EX-10.44,2024-08-20,val,169551,https://www.sec.gov/Archives/edgar/data/65596/000121390024071183/ea021195001ex10-44_siebert.htm
+0001213900-24-081289__ea021546101ex10-1_safe,SAFE & GREEN HOLDINGS CORP.,EX-10.1,2024-09-24,train,159950,https://www.sec.gov/Archives/edgar/data/1023994/000121390024081289/ea021546101ex10-1_safe.htm
+0001213900-24-090416__ea021849901ex10-1_falcons,"Falcon's Beyond Global, Inc.",EX-10.1,2024-10-24,train,5663,https://www.sec.gov/Archives/edgar/data/1937987/000121390024090416/ea021849901ex10-1_falcons.htm
+0001213900-24-102455__ea022260501ex10-1_kayne,"Kayne Anderson BDC, Inc.",EX-10.1,2024-11-26,train,559094,https://www.sec.gov/Archives/edgar/data/1747172/000121390024102455/ea022260501ex10-1_kayne.htm
+0001213900-24-106514__ea022397101ex10-1_bgcgroup,"BGC Group, Inc.",EX-10.1,2024-12-06,train,24301,https://www.sec.gov/Archives/edgar/data/1094831/000121390024106514/ea022397101ex10-1_bgcgroup.htm
+0001213900-25-001708__ea022685001ex10-11_rain,"Rain Enhancement Technologies Holdco, Inc.",EX-10.11,2025-01-07,train,26205,https://www.sec.gov/Archives/edgar/data/2028293/000121390025001708/ea022685001ex10-11_rain.htm
+0001213900-25-011427__ea023038901ex10-1_kayne,"Kayne Anderson BDC, Inc.",EX-10.1,2025-02-10,train,380577,https://www.sec.gov/Archives/edgar/data/1747172/000121390025011427/ea023038901ex10-1_kayne.htm
+0001213900-25-023703__ea023371901ex10-1_purple,"Purple Innovation, Inc.",EX-10.1,2025-03-13,train,529009,https://www.sec.gov/Archives/edgar/data/1643953/000121390025023703/ea023371901ex10-1_purple.htm
+0001213900-25-031173__ea023793401ex10-1_ecdauto,"ECD Automotive Design, Inc.",EX-10.1,2025-04-11,train,91042,https://www.sec.gov/Archives/edgar/data/1922858/000121390025031173/ea023793401ex10-1_ecdauto.htm
+0001213900-25-034184__ea023906401ex10-1_nkgen,"NKGen Biotech, Inc.",EX-10.1,2025-04-22,train,8009,https://www.sec.gov/Archives/edgar/data/1845459/000121390025034184/ea023906401ex10-1_nkgen.htm
+0001213900-25-040151__ea024094101ex10-1_purple,"Purple Innovation, Inc.",EX-10.1,2025-05-06,test,538117,https://www.sec.gov/Archives/edgar/data/1643953/000121390025040151/ea024094101ex10-1_purple.htm
+0001213900-25-046902__ea024322401ex10-1_globalint,"Global Interactive Technologies, Inc.",EX-10.1,2025-05-22,test,4098,https://www.sec.gov/Archives/edgar/data/1911545/000121390025046902/ea024322401ex10-1_globalint.htm
+0001213900-25-071356__ea025147601ex10-1_acuren,ACUREN CORP,EX-10.1,2025-08-04,train,739699,https://www.sec.gov/Archives/edgar/data/2032966/000121390025071356/ea025147601ex10-1_acuren.htm
+0001213900-25-074983__ea025289001ex10-1_immucell,IMMUCELL CORP /DE/,EX-10.1,2025-08-12,train,89656,https://www.sec.gov/Archives/edgar/data/811641/000121390025074983/ea025289001ex10-1_immucell.htm
+0001213900-25-080805__ea025463501ex10-1_briley,"B. Riley Financial, Inc.",EX-10.1,2025-08-26,test,541972,https://www.sec.gov/Archives/edgar/data/1464790/000121390025080805/ea025463501ex10-1_briley.htm
+0001213900-25-089790__ea025811801ex10-1_postal,"Postal Realty Trust, Inc.",EX-10.1,2025-09-22,train,478067,https://www.sec.gov/Archives/edgar/data/1759774/000121390025089790/ea025811801ex10-1_postal.htm
+0001227654-22-000165__cmp-2022creditagreementame,COMPASS MINERALS INTERNATIONAL INC,EX-10.1,2022-06-13,train,19656,https://www.sec.gov/Archives/edgar/data/1227654/000122765422000165/cmp-2022creditagreementame.htm
+0001227654-22-000318__cmp-creditagreementamendme,COMPASS MINERALS INTERNATIONAL INC,EX-10.1,2022-11-22,train,802922,https://www.sec.gov/Archives/edgar/data/1227654/000122765422000318/cmp-creditagreementamendme.htm
+0001275158-23-000100__firstamendmenttoamendedand,NOODLES & Co,EX-10.1,2023-12-26,train,22107,https://www.sec.gov/Archives/edgar/data/1275158/000127515823000100/firstamendmenttoamendedand.htm
+0001365916-23-000072__dsm_amyris-loanandsecuri,"AMYRIS, INC.",EX-10.5,2023-06-05,test,260110,https://www.sec.gov/Archives/edgar/data/1365916/000136591623000072/dsm_amyris-loanandsecuri.htm
+0001377630-22-000003__ncm-amendmentno3tocreditag,"National CineMedia, Inc.",EX-10.1,2022-01-06,train,644861,https://www.sec.gov/Archives/edgar/data/1377630/000137763022000003/ncm-amendmentno3tocreditag.htm
+0001383312-24-000062__ex101creditagmt12-24,"BROADRIDGE FINANCIAL SOLUTIONS, INC.",EX-10.1,2024-12-13,train,516483,https://www.sec.gov/Archives/edgar/data/1383312/000138331224000062/ex101creditagmt12-24.htm
+0001387131-22-004773__ex10-1,CPI AEROSTRUCTURES INC,EX-10.1,2022-04-12,train,27858,https://www.sec.gov/Archives/edgar/data/889348/000138713122004773/ex10-1.htm
+0001387131-22-009203__ex-10_1,"CNL Strategic Capital, LLC",EX-10.1,2022-08-29,val,118353,https://www.sec.gov/Archives/edgar/data/1684682/000138713122009203/ex-10_1.htm
+0001392972-25-000122__firstamendmenttocreditagre,"PROS Holdings, Inc.",EX-10,2025-06-25,val,22634,https://www.sec.gov/Archives/edgar/data/1392972/000139297225000122/firstamendmenttocreditagre.htm
+0001393726-25-000007__ex10-1fortresscreditagt2025,TIPTREE INC.,EX-10.1,2025-02-10,train,482607,https://www.sec.gov/Archives/edgar/data/1393726/000139372625000007/ex10-1fortresscreditagt2025.htm
+0001393905-22-000425__cmxc_ex102,Cell MedX Corp.,EX-10.2,2022-10-18,train,5359,https://www.sec.gov/Archives/edgar/data/1493712/000139390522000425/cmxc_ex102.htm
+0001395942-23-000074__exhibit101-creditagreement,"OPENLANE, Inc.",EX-10.1,2023-06-26,test,584813,https://www.sec.gov/Archives/edgar/data/1395942/000139594223000074/exhibit101-creditagreement.htm
+0001437749-22-014739__ex_384507,"ROCKY BRANDS, INC.",EX-10.2,2022-06-10,test,411075,https://www.sec.gov/Archives/edgar/data/895456/000143774922014739/ex_384507.htm
+0001437749-23-008244__ex_493949,RGC RESOURCES INC,EX-10.3,2023-03-28,train,85560,https://www.sec.gov/Archives/edgar/data/1069533/000143774923008244/ex_493949.htm
+0001446687-24-000069__juniorloanagreement,"SILVER STAR PROPERTIES REIT, INC",EX-10.3,2024-04-02,train,494704,https://www.sec.gov/Archives/edgar/data/1446687/000144668724000069/juniorloanagreement.htm
+0001466085-25-000008__ex101fiftharcreditagreement,"INDEPENDENCE REALTY TRUST, INC.",EX-10.1,2025-01-10,train,566959,https://www.sec.gov/Archives/edgar/data/1466085/000146608525000008/ex101fiftharcreditagreement.htm
+0001472375-22-000130__exhibit10-1,Mobile Infrastructure Corp,EX-10.1,2022-11-22,train,12699,https://www.sec.gov/Archives/edgar/data/1642985/000147237522000130/exhibit10-1.htm
+0001477294-23-000123__sensata-amendmentno13confo,Sensata Technologies Holding plc,EX-10.1,2023-08-28,train,768664,https://www.sec.gov/Archives/edgar/data/1477294/000147729423000123/sensata-amendmentno13confo.htm
+0001477294-25-000126__conformedcreditagreement,Sensata Technologies Holding plc,EX-10.1,2025-09-29,train,749576,https://www.sec.gov/Archives/edgar/data/1477294/000147729425000126/conformedcreditagreement.htm
+0001477932-22-001254__king_ex101,Kingfish Holding Corp,EX-10.1,2022-03-09,train,14973,https://www.sec.gov/Archives/edgar/data/1374881/000147793222001254/king_ex101.htm
+0001505155-23-000007__amendmentno1tocreditagreem,"Upland Software, Inc.",EX-10.1,2023-02-23,val,586971,https://www.sec.gov/Archives/edgar/data/1505155/000150515523000007/amendmentno1tocreditagreem.htm
+0001505155-25-000080__exhibit101sp-uplandxcredit,"Upland Software, Inc.",EX-10.1,2025-07-28,train,797905,https://www.sec.gov/Archives/edgar/data/1505155/000150515525000080/exhibit101sp-uplandxcredit.htm
+0001522767-23-000004__exhibit101loanandsecuritya,MARIMED INC.,EX-10.1,2023-01-24,train,304910,https://www.sec.gov/Archives/edgar/data/1522767/000152276723000004/exhibit101loanandsecuritya.htm
+0001553350-22-000988__spfx_ex10z1,"STANDARD PREMIUM FINANCE HOLDINGS, INC.",EX-10.1,2022-12-05,train,25462,https://www.sec.gov/Archives/edgar/data/1807893/000155335022000988/spfx_ex10z1.htm
+0001564406-22-000017__herculescapital-oakstreeth,"Oak Street Health, Inc.",EX-10.1,2022-10-03,train,313354,https://www.sec.gov/Archives/edgar/data/1564406/000156440622000017/herculescapital-oakstreeth.htm
+0001567925-22-000005__ex102termloanagreement-8xk,"Sila Realty Trust, Inc.",EX-10.2,2022-02-22,train,467493,https://www.sec.gov/Archives/edgar/data/1567925/000156792522000005/ex102termloanagreement-8xk.htm
+0001573516-25-000029__ex101_musaxrefinancingfaci,Murphy USA Inc.,EX-10.1,2025-04-11,train,660632,https://www.sec.gov/Archives/edgar/data/1573516/000157351625000029/ex101_musaxrefinancingfaci.htm
+0001574540-23-000119__exhibit101forcreditagrmt,Physicians Realty Trust,EX-10.1,2023-04-03,train,549669,https://www.sec.gov/Archives/edgar/data/1574540/000157454023000119/exhibit101forcreditagrmt.htm
+0001580695-22-000037__ex10-1,Vertex Energy Inc.,EX-10.1,2022-04-07,train,417766,https://www.sec.gov/Archives/edgar/data/890447/000158069522000037/ex10-1.htm
+0001585101-25-000013__jpmcreditagreementmarch2025,"HINES GLOBAL INCOME TRUST, INC.",EX-10.1,2025-03-14,train,554515,https://www.sec.gov/Archives/edgar/data/1585101/000158510125000013/jpmcreditagreementmarch2025.htm
+0001590714-23-000085__esi8-k12182023exx101,Element Solutions Inc,EX-10.1,2023-12-22,train,693379,https://www.sec.gov/Archives/edgar/data/1590714/000159071423000085/esi8-k12182023exx101.htm
+0001609711-23-000092__ex101-conformedcreditagree,GoDaddy Inc.,EX-10.1,2023-05-05,train,911364,https://www.sec.gov/Archives/edgar/data/1609711/000160971123000092/ex101-conformedcreditagree.htm
+0001618755-23-000045__rbi-amendmentno7tocreditag,Restaurant Brands International Limited Partnership,EX-10.10(M),2023-09-21,train,861381,https://www.sec.gov/Archives/edgar/data/1618755/000161875523000045/rbi-amendmentno7tocreditag.htm
+0001618756-23-000051__rbi-amendmentno7tocreditag,Restaurant Brands International Inc.,EX-10.10(M),2023-09-21,test,861381,https://www.sec.gov/Archives/edgar/data/1618756/000161875623000051/rbi-amendmentno7tocreditag.htm
+0001625278-23-000109__exhibit101-creditagreement,"NERDWALLET, INC.",EX-10.1,2023-09-27,train,560226,https://www.sec.gov/Archives/edgar/data/1625278/000162527823000109/exhibit101-creditagreement.htm
+0001628280-22-000380__thirdamendmenttocreditagre,FORWARD AIR CORP,EX-10.1,2022-01-06,train,499322,https://www.sec.gov/Archives/edgar/data/912728/000162828022000380/thirdamendmenttocreditagre.htm
+0001628280-23-031458__cumberlandpharm-arloanagre,CUMBERLAND PHARMACEUTICALS INC,EX-10.1,2023-09-06,train,95076,https://www.sec.gov/Archives/edgar/data/1087294/000162828023031458/cumberlandpharm-arloanagre.htm
+0001628280-25-024294__grove-amendmentno3toloan,"Grove Collaborative Holdings, Inc.",EX-10.1,2025-05-09,train,357702,https://www.sec.gov/Archives/edgar/data/1841761/000162828025024294/grove-amendmentno3toloan.htm
+0001628280-25-027098__exhibit101-amendedandresta,MOSAIC CO,EX-10.1,2025-05-21,train,495453,https://www.sec.gov/Archives/edgar/data/1285785/000162828025027098/exhibit101-amendedandresta.htm
+0001628280-25-027919__jamf-amendmentno1tocredita,Jamf Holding Corp.,EX-10.1,2025-05-27,train,610684,https://www.sec.gov/Archives/edgar/data/1721947/000162828025027919/jamf-amendmentno1tocredita.htm
+0001628280-25-029146__piii-20250529xex101termnote,P3 Health Partners Inc.,EX-10.1,2025-06-03,train,48164,https://www.sec.gov/Archives/edgar/data/1832511/000162828025029146/piii-20250529xex101termnote.htm
+0001628280-25-033528__exhibit10-1cvgxtcwxloanand,"Commercial Vehicle Group, Inc.",EX-10.1,2025-06-30,train,528674,https://www.sec.gov/Archives/edgar/data/1290900/000162828025033528/exhibit10-1cvgxtcwxloanand.htm
+0001628280-25-043080__exhibit101-termloanagree,NETSTREIT Corp.,EX-10.1,2025-09-29,train,471768,https://www.sec.gov/Archives/edgar/data/1798100/000162828025043080/exhibit101-termloanagree.htm
+0001639825-22-000079__termloanfullexhibit101,"PELOTON INTERACTIVE, INC.",EX-10.1,2022-05-26,train,518813,https://www.sec.gov/Archives/edgar/data/1639825/000163982522000079/termloanfullexhibit101.htm
+0001652535-25-000064__ex_101xdebtrefix092625,"ICHOR HOLDINGS, LTD.",EX-10.1,2025-09-30,train,637671,https://www.sec.gov/Archives/edgar/data/1652535/000165253525000064/ex_101xdebtrefix092625.htm
+0001653558-24-000073__prioritypayments-credita,"Priority Technology Holdings, Inc.",EX-10.1,2024-05-21,train,868986,https://www.sec.gov/Archives/edgar/data/1653558/000165355824000073/prioritypayments-credita.htm
+0001654954-22-007854__crge_ex101,"Charge Enterprises, Inc.",EX-10.1,2022-06-02,train,108448,https://www.sec.gov/Archives/edgar/data/1277250/000165495422007854/crge_ex101.htm
+0001654954-25-011027__tssi_ex101,"TSS, Inc.",EX-10.1,2025-09-23,val,23992,https://www.sec.gov/Archives/edgar/data/1320760/000165495425011027/tssi_ex101.htm
+0001657853-23-000166__amendmentno7tocreditagreem,"HERTZ GLOBAL HOLDINGS, INC",EX-10.1,2023-11-17,test,920213,https://www.sec.gov/Archives/edgar/data/1657853/000165785323000166/amendmentno7tocreditagreem.htm
+0001683168-22-006322__lantronix_ex1001,LANTRONIX INC,EX-10.1,2022-09-12,train,28268,https://www.sec.gov/Archives/edgar/data/1114925/000168316822006322/lantronix_ex1001.htm
+0001683168-22-006893__ipower_ex1001,iPower Inc.,EX-10.1,2022-10-14,train,586704,https://www.sec.gov/Archives/edgar/data/1830072/000168316822006893/ipower_ex1001.htm
+0001683168-23-005902__odyssey_ex1002,"Odyssey Health, Inc.",EX-10.2,2023-08-18,train,26851,https://www.sec.gov/Archives/edgar/data/1626644/000168316823005902/odyssey_ex1002.htm
+0001683168-23-007595__avid_ex1001,"Avid Bioservices, Inc.",EX-10.1,2023-11-02,train,9332,https://www.sec.gov/Archives/edgar/data/704562/000168316823007595/avid_ex1001.htm
+0001683168-24-007934__ipower_ex1001,iPower Inc.,EX-10.1,2024-11-13,test,23018,https://www.sec.gov/Archives/edgar/data/1830072/000168316824007934/ipower_ex1001.htm
+0001683168-25-004380__bitmine_ex1002,"BITMINE IMMERSION TECHNOLOGIES, INC.",EX-10.2,2025-06-10,train,20057,https://www.sec.gov/Archives/edgar/data/1829311/000168316825004380/bitmine_ex1002.htm
+0001683168-25-006827__nixxy_ex1001,"Nixxy, Inc.",EX-10.1,2025-09-10,train,15105,https://www.sec.gov/Archives/edgar/data/1462223/000168316825006827/nixxy_ex1001.htm
+0001702510-24-000091__carlylecreditsolutions-arl,"Carlyle Credit Solutions, Inc.",EX-10.1,2024-12-17,train,352067,https://www.sec.gov/Archives/edgar/data/1702510/000170251024000091/carlylecreditsolutions-arl.htm
+0001702510-25-000115__jpm-carlylecreditsolutio,"Carlyle Credit Solutions, Inc.",EX-10.1,2025-09-02,test,392699,https://www.sec.gov/Archives/edgar/data/1702510/000170251025000115/jpm-carlylecreditsolutio.htm
+0001704720-25-000106__exhibit101marginloanagreem,"Cannae Holdings, Inc.",EX-10.1,2025-08-28,train,348167,https://www.sec.gov/Archives/edgar/data/1704720/000170472025000106/exhibit101marginloanagreem.htm
+0001722438-23-000086__exh101-amendmenttoloanands,"Doma Holdings, Inc.",EX-10.1,2023-05-23,train,328454,https://www.sec.gov/Archives/edgar/data/1722438/000172243823000086/exh101-amendmenttoloanands.htm
+0001728951-22-000103__ex101-2ndamendcreditagreem,"ESSENTIAL PROPERTIES REALTY TRUST, INC.",EX-10.1,2022-08-24,train,407986,https://www.sec.gov/Archives/edgar/data/1728951/000172895122000103/ex101-2ndamendcreditagreem.htm
+0001728951-23-000089__ex101-4thamendcreditagreem,"ESSENTIAL PROPERTIES REALTY TRUST, INC.",EX-10.1,2023-08-29,train,485705,https://www.sec.gov/Archives/edgar/data/1728951/000172895123000089/ex101-4thamendcreditagreem.htm
+0001728951-24-000120__ex101-5thamendcreditagreem,"ESSENTIAL PROPERTIES REALTY TRUST, INC.",EX-10.1,2024-07-17,test,506979,https://www.sec.gov/Archives/edgar/data/1728951/000172895124000120/ex101-5thamendcreditagreem.htm
+0001751008-24-000017__creditagreementexhibit101,AppLovin Corp,EX-10.1,2024-03-14,val,880802,https://www.sec.gov/Archives/edgar/data/1751008/000175100824000017/creditagreementexhibit101.htm
+0001759509-23-000123__lyft-amendmentno1tocredita,"Lyft, Inc.",EX-10.1,2023-12-14,train,19574,https://www.sec.gov/Archives/edgar/data/1759509/000175950923000123/lyft-amendmentno1tocredita.htm
+0001798100-23-000060__netstreit2023termloanagree,NETSTREIT Corp.,EX-10.1,2023-06-20,train,447626,https://www.sec.gov/Archives/edgar/data/1798100/000179810023000060/netstreit2023termloanagree.htm
+0001799208-23-000029__dnb-amendmentno7tocredit,"Dun & Bradstreet Holdings, Inc.",EX-10.1,2023-07-27,val,894430,https://www.sec.gov/Archives/edgar/data/1799208/000179920823000029/dnb-amendmentno7tocredit.htm
+0001799208-24-000003__dnb-amendmentno8tocredit,"Dun & Bradstreet Holdings, Inc.",EX-10.1,2024-01-30,train,918540,https://www.sec.gov/Archives/edgar/data/1799208/000179920824000003/dnb-amendmentno8tocredit.htm
+0001816590-23-000093__exhibit101loanandsecuritya,COMPASS Pathways plc,EX-10.1,2023-07-05,train,249247,https://www.sec.gov/Archives/edgar/data/1816590/000181659023000093/exhibit101loanandsecuritya.htm
+0001828791-23-000030__redline-conformedcreditagr,Viant Technology Inc.,EX-10.1,2023-04-06,train,592755,https://www.sec.gov/Archives/edgar/data/1828791/000182879123000030/redline-conformedcreditagr.htm
+0001831631-24-000191__loandepot_gsxspv1stamendme,"loanDepot, Inc.",EX-10.1,2024-07-30,train,12885,https://www.sec.gov/Archives/edgar/data/1831631/000183163124000191/loandepot_gsxspv1stamendme.htm
+0001839882-22-026322__ex10-1,CPI AEROSTRUCTURES INC,EX-10.1,2022-11-10,train,20183,https://www.sec.gov/Archives/edgar/data/889348/000183988222026322/ex10-1.htm
+0001856525-24-000067__seniortermloanfacility4tha,"Core & Main, Inc.",EX-10.1,2024-05-23,train,44434,https://www.sec.gov/Archives/edgar/data/1856525/000185652524000067/seniortermloanfacility4tha.htm
+0001877939-24-000011__exhibit102-loanandsecurity,"Castellum, Inc.",EX-10.2,2024-02-23,train,134195,https://www.sec.gov/Archives/edgar/data/1877939/000187793924000011/exhibit102-loanandsecurity.htm
+0001883313-25-000092__savers-creditagreement2025,"Savers Value Village, Inc.",EX-10.1,2025-09-19,val,1020136,https://www.sec.gov/Archives/edgar/data/1883313/000188331325000092/savers-creditagreement2025.htm
+0001944366-23-000032__a104fourthamendmenttocredi,Blue Owl Real Estate Net Lease Trust,EX-10.4,2023-09-01,test,598925,https://www.sec.gov/Archives/edgar/data/1944366/000194436623000032/a104fourthamendmenttocredi.htm
