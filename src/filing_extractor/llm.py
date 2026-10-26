@@ -96,7 +96,7 @@ class CachedClient:
             for line in path.read_text(encoding="utf-8").splitlines():
                 if line.strip():
                     row = json.loads(line)
-                    self._store[row["key"]] = row["response"]
+                    self._store[row["prompt_hash"]] = row["response"]
 
     def key(self, system: str, user: str) -> str:
         blob = f"{self.model_id}\n{PROMPT_VERSION}\n{system}\n{user}"
@@ -115,7 +115,7 @@ class CachedClient:
         self._store[key] = response
         self._path.parent.mkdir(parents=True, exist_ok=True)
         with self._path.open("a", encoding="utf-8") as fh:
-            fh.write(json.dumps({"key": key, "response": response}) + "\n")
+            fh.write(json.dumps({"prompt_hash": key, "response": response}) + "\n")
         return response
 
 

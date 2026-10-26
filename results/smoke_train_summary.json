@@ -1,0 +1,12 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "cpu",
+  "train_examples": 12,
+  "optimizer_steps": 6,
+  "first_loss": 0.7931,
+  "last_loss": 0.0331,
+  "trainable_params": 8798208,
+  "total_params": 502830976,
+  "seconds": 27.9,
+  "smoke": true
+}

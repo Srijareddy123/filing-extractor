@@ -1,0 +1,253 @@
+{
+  "splits": {
+    "val": {
+      "rules": {
+        "n_passages": 80,
+        "n_documents": 27,
+        "overall_exact_match_ci95": [
+          0.907,
+          0.965
+        ],
+        "seconds": 0.01,
+        "parse_errors": 0,
+        "fields": {
+          "facility_size": {
+            "n": 80,
+            "n_answerable": 5,
+            "exact_match": 0.8875,
+            "f1": 0.8875,
+            "answer_precision": 0.35714285714285715,
+            "answer_recall": 1.0,
+            "answer_f1": 0.5263157894736842,
+            "exact_match_answerable": 1.0,
+            "unresolved_rate": 0.825,
+            "answerable_unresolved_rate": 0.0,
+            "false_answer_rate": 0.12
+          },
+          "maturity": {
+            "n": 80,
+            "n_answerable": 11,
+            "exact_match": 0.95,
+            "f1": 0.95,
+            "answer_precision": 0.7333333333333333,
+            "answer_recall": 1.0,
+            "answer_f1": 0.846153846153846,
+            "exact_match_answerable": 1.0,
+            "unresolved_rate": 0.8125,
+            "answerable_unresolved_rate": 0.0,
+            "false_answer_rate": 0.057971014492753624
+          },
+          "interest_margin": {
+            "n": 80,
+            "n_answerable": 4,
+            "exact_match": 0.9375,
+            "f1": 0.9375,
+            "answer_precision": 0.4,
+            "answer_recall": 0.5,
+            "answer_f1": 0.4444444444444445,
+            "exact_match_answerable": 0.5,
+            "unresolved_rate": 0.9375,
+            "answerable_unresolved_rate": 0.5,
+            "false_answer_rate": 0.039473684210526314
+          },
+          "lender": {
+            "n": 80,
+            "n_answerable": 17,
+            "exact_match": 0.95,
+            "f1": 0.96,
+            "answer_precision": 0.875,
+            "answer_recall": 0.8235294117647058,
+            "answer_f1": 0.8484848484848485,
+            "exact_match_answerable": 0.8235294117647058,
+            "unresolved_rate": 0.8,
+            "answerable_unresolved_rate": 0.11764705882352941,
+            "false_answer_rate": 0.015873015873015872
+          },
+          "financial_covenants": {
+            "n": 80,
+            "n_answerable": 6,
+            "exact_match": 0.9625,
+            "f1": 0.9625,
+            "answer_precision": 0.7142857142857143,
+            "answer_recall": 0.8333333333333334,
+            "answer_f1": 0.7692307692307692,
+            "exact_match_answerable": 0.8333333333333334,
+            "unresolved_rate": 0.9125,
+            "answerable_unresolved_rate": 0.16666666666666666,
+            "false_answer_rate": 0.02702702702702703
+          },
+          "overall": {
+            "n": 400,
+            "n_answerable": 43,
+            "exact_match": 0.9375,
+            "f1": 0.9395,
+            "answer_precision": 0.6491228070175439,
+            "answer_recall": 0.8604651162790697,
+            "answer_f1": 0.74,
+            "exact_match_answerable": 0.8604651162790697,
+            "unresolved_rate": 0.8575,
+            "answerable_unresolved_rate": 0.11627906976744186,
+            "false_answer_rate": 0.05322128851540616
+          }
+        },
+        "by_doc_kind": {
+          "long": {
+            "n_passages": 65,
+            "n": 325,
+            "n_answerable": 33,
+            "exact_match": 0.9476923076923077,
+            "f1": 0.9476923076923077,
+            "answer_precision": 0.6818181818181818,
+            "answer_recall": 0.9090909090909091,
+            "answer_f1": 0.7792207792207791,
+            "exact_match_answerable": 0.9090909090909091,
+            "unresolved_rate": 0.8646153846153846,
+            "answerable_unresolved_rate": 0.09090909090909091,
+            "false_answer_rate": 0.04794520547945205
+          },
+          "short": {
+            "n_passages": 15,
+            "n": 75,
+            "n_answerable": 10,
+            "exact_match": 0.8933333333333333,
+            "f1": 0.9039999999999999,
+            "answer_precision": 0.5384615384615384,
+            "answer_recall": 0.7,
+            "answer_f1": 0.608695652173913,
+            "exact_match_answerable": 0.7,
+            "unresolved_rate": 0.8266666666666667,
+            "answerable_unresolved_rate": 0.2,
+            "false_answer_rate": 0.07692307692307693
+          }
+        }
+      }
+    },
+    "test": {
+      "rules": {
+        "n_passages": 86,
+        "n_documents": 27,
+        "overall_exact_match_ci95": [
+          0.926,
+          0.966
+        ],
+        "seconds": 0.01,
+        "parse_errors": 0,
+        "fields": {
+          "facility_size": {
+            "n": 86,
+            "n_answerable": 10,
+            "exact_match": 0.8837209302325582,
+            "f1": 0.8837209302325582,
+            "answer_precision": 0.47368421052631576,
+            "answer_recall": 0.9,
+            "answer_f1": 0.6206896551724138,
+            "exact_match_answerable": 0.9,
+            "unresolved_rate": 0.7790697674418605,
+            "answerable_unresolved_rate": 0.0,
+            "false_answer_rate": 0.11842105263157894
+          },
+          "maturity": {
+            "n": 86,
+            "n_answerable": 7,
+            "exact_match": 0.9767441860465116,
+            "f1": 0.9767441860465116,
+            "answer_precision": 0.7777777777777778,
+            "answer_recall": 1.0,
+            "answer_f1": 0.8750000000000001,
+            "exact_match_answerable": 1.0,
+            "unresolved_rate": 0.8953488372093024,
+            "answerable_unresolved_rate": 0.0,
+            "false_answer_rate": 0.02531645569620253
+          },
+          "interest_margin": {
+            "n": 86,
+            "n_answerable": 5,
+            "exact_match": 0.9418604651162791,
+            "f1": 0.9418604651162791,
+            "answer_precision": 0.5,
+            "answer_recall": 0.6,
+            "answer_f1": 0.5454545454545454,
+            "exact_match_answerable": 0.6,
+            "unresolved_rate": 0.9302325581395349,
+            "answerable_unresolved_rate": 0.4,
+            "false_answer_rate": 0.037037037037037035
+          },
+          "lender": {
+            "n": 86,
+            "n_answerable": 12,
+            "exact_match": 0.9767441860465116,
+            "f1": 0.9870801033591731,
+            "answer_precision": 0.9090909090909091,
+            "answer_recall": 0.8333333333333334,
+            "answer_f1": 0.8695652173913043,
+            "exact_match_answerable": 0.8333333333333334,
+            "unresolved_rate": 0.872093023255814,
+            "answerable_unresolved_rate": 0.08333333333333333,
+            "false_answer_rate": 0.0
+          },
+          "financial_covenants": {
+            "n": 86,
+            "n_answerable": 5,
+            "exact_match": 0.9534883720930233,
+            "f1": 0.9534883720930233,
+            "answer_precision": 0.6666666666666666,
+            "answer_recall": 0.4,
+            "answer_f1": 0.5,
+            "exact_match_answerable": 0.4,
+            "unresolved_rate": 0.9651162790697675,
+            "answerable_unresolved_rate": 0.6,
+            "false_answer_rate": 0.012345679012345678
+          },
+          "overall": {
+            "n": 430,
+            "n_answerable": 39,
+            "exact_match": 0.9465116279069767,
+            "f1": 0.9485788113695091,
+            "answer_precision": 0.6458333333333334,
+            "answer_recall": 0.7948717948717948,
+            "answer_f1": 0.7126436781609194,
+            "exact_match_answerable": 0.7948717948717948,
+            "unresolved_rate": 0.8883720930232558,
+            "answerable_unresolved_rate": 0.15384615384615385,
+            "false_answer_rate": 0.03836317135549872
+          }
+        },
+        "by_doc_kind": {
+          "long": {
+            "n_passages": 66,
+            "n": 330,
+            "n_answerable": 28,
+            "exact_match": 0.9515151515151515,
+            "f1": 0.9542087542087543,
+            "answer_precision": 0.6571428571428571,
+            "answer_recall": 0.8214285714285714,
+            "answer_f1": 0.73015873015873,
+            "exact_match_answerable": 0.8214285714285714,
+            "unresolved_rate": 0.8939393939393939,
+            "answerable_unresolved_rate": 0.14285714285714285,
+            "false_answer_rate": 0.03642384105960265
+          },
+          "short": {
+            "n_passages": 20,
+            "n": 100,
+            "n_answerable": 11,
+            "exact_match": 0.93,
+            "f1": 0.93,
+            "answer_precision": 0.6153846153846154,
+            "answer_recall": 0.7272727272727273,
+            "answer_f1": 0.6666666666666667,
+            "exact_match_answerable": 0.7272727272727273,
+            "unresolved_rate": 0.87,
+            "answerable_unresolved_rate": 0.18181818181818182,
+            "false_answer_rate": 0.0449438202247191
+          }
+        }
+      }
+    }
+  },
+  "status": {
+    "rules": "ok",
+    "llm": "pending: ANTHROPIC_API_KEY is not set and 166 of 166 responses are not cached in results/llm_cache.jsonl",
+    "lora": "pending: no LoRA adapter at outputs/lora-qwen2.5-0.5b (train on a GPU first)"
+  }
+}
