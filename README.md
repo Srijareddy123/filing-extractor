@@ -18,7 +18,7 @@ Command: `make eval`. 86 held-out test passages; 44% have no answer, so "unresol
 | LoRA fine-tuned small model | 0.942 | 0.723 | 86 passages, 27 documents, test split; 95% interval over documents 0.915 to 0.966 |
 <!-- results:end -->
 
-LoRA (Qwen2.5 Instruct, trained on a Colab T4; model size not recorded in `results/`) found more answerable fields than rules on test (answer recall 0.872 against 0.795, 34 against 31 of 39) but with lower precision (0.618 against 0.646) and more false answers, and it was slightly behind rules on validation. The intervals overlap, so this is not a clear win. The 33 MB adapter is not in the repo; it is available on request.
+LoRA (`Qwen/Qwen2.5-0.5B-Instruct`, trained on a Colab T4) found more answerable fields than rules on test (answer recall 0.872 against 0.795, 34 against 31 of 39) but with lower precision (0.618 against 0.646) and more false answers, and it was slightly behind rules on validation. The intervals overlap, so this is not a clear win. The 33 MB adapter is not in the repo; it is available on request.
 
 ## How it works
 
@@ -95,6 +95,6 @@ git add results README.md docs && git commit -m "Add LoRA results from a GPU run
 
 - Label more passages, mainly margins and covenants, and have a second person label a sample to get an agreement score.
 - Handle pricing grids as tables instead of flattened text.
-- Train 0.5B and 1.5B, record the model size in `results/`, and compare both with the LLM baseline on the same test passages.
+- Train the 1.5B model too, record the model name in `results/`, and compare both with the LLM baseline on the same test passages.
 - Add retrieval so a whole exhibit can be processed, not just a chosen passage.
 - Calibrate: let the model say how sure it is, and route low-confidence fields to review.

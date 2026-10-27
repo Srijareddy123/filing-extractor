@@ -39,7 +39,7 @@ Overall exact match 95% interval over documents: 0.915 to 0.966.
 ## Notes
 
 - **The prompted LLM row is pending on purpose.** No Anthropic key was available, so no number is shown until a run produces one.
-- **The LoRA row comes from one Colab T4 run.** The model size (0.5B is the notebook default, 1.5B is an option) was not recorded in `results/`. The 33 MB adapter is not in the repo and is available on request.
+- **The LoRA row comes from one Colab T4 run.** The base model was `Qwen/Qwen2.5-0.5B-Instruct` (adapter folder `outputs/lora-qwen2.5-0.5b-instruct`). The 33 MB adapter is not in the repo and is available on request.
 - The CPU smoke test (`make smoke`, `results/smoke_train_summary.json`) trains 6 steps on 12 passages to check that the training and inference code runs. Its loss went from 0.793 to 0.033 in 28 seconds. That says nothing about quality.
 - The test split has 5 to 12 answers per field. A difference of a few points between two models is inside the noise; the interval above resamples whole documents.
 - Rules were written after reading the training and validation errors. I also labeled the test passages, so the rules row is mildly optimistic.
@@ -63,7 +63,7 @@ Personal project on public data. Sources are in `data/sources.csv`; labeling rul
 
 Fuller flow: EDGAR full-text search, download EX-10 exhibits, pick candidate passages, hand labels, split by source document, then rules, prompted LLM or LoRA fine-tune, grounding check, metrics and MLflow, FastAPI `/extract` and batch CLI.
 
-- Qwen2.5 is 0.5B by default and 1.5B in the notebook. MLflow uses SQLite in `outputs/`.
+- The LoRA run used `Qwen/Qwen2.5-0.5B-Instruct`; the notebook can also train the 1.5B model. MLflow uses SQLite in `outputs/`.
 - Score history: my first score, 0.93 exact match for the rules on training data, was mostly blank equals blank. I added answer F1 and the answerable-but-unresolved and answered-but-unanswerable rates.
 - Margin coverage: a targeted second labeling pass plus 120 smaller loan papers brought interest margin to 30 answers.
 - Rules: training errors caught a lender regex that cut "Bank of America, N.A." to "America, N.A.".
