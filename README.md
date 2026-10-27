@@ -15,8 +15,10 @@ Command: `make eval`. 86 held-out test passages; 44% have no answer, so "unresol
 |---|---|---|---|
 | Rules (regex) | 0.947 | 0.713 | 86 passages, 27 documents, test split; 95% interval over documents 0.926 to 0.966 |
 | Prompted LLM, structured output | pending | pending | pending, no `ANTHROPIC_API_KEY` was available; run `make eval` with a key |
-| LoRA fine-tuned small model | pending | pending | pending, needs a GPU and has not been run yet |
+| LoRA fine-tuned small model | 0.942 | 0.723 | 86 passages, 27 documents, test split; 95% interval over documents 0.915 to 0.966 |
 <!-- results:end -->
+
+LoRA (Qwen2.5 Instruct, trained on a Colab T4; model size not recorded in `results/`) found more answerable fields than rules on test (answer recall 0.872 against 0.795, 34 against 31 of 39) but with lower precision (0.618 against 0.646) and more false answers, and it was slightly behind rules on validation. The intervals overlap, so this is not a clear win. The 33 MB adapter is not in the repo; it is available on request.
 
 ## How it works
 
@@ -30,7 +32,7 @@ flowchart LR
 - Three extractors share one interface: regex rules, an LLM forced to call a tool shaped like the Pydantic model, and Qwen2.5 with PEFT.
 - A grounding check turns any value not found verbatim in the passage into `unresolved`.
 - Runs log to MLflow. `/extract` and the batch CLI pick the extractor with `FX_MODEL` or `--model`.
-- The default is `rules`, the only one with measured numbers so far.
+- The default is `rules`. LoRA is measured too and is not a clear win (see Results).
 
 ## Design choices
 
@@ -62,12 +64,12 @@ filing-extract --model rules batch data/sample/demo_input.jsonl out.jsonl
 
 - **Prompted LLM:** put `ANTHROPIC_API_KEY` in `.env` (see `.env.example`) and run `make eval`. Responses are cached in `results/llm_cache.jsonl`, so reruns cost nothing. Tests and the demo use a fake client with canned answers (`data/sample/`), which prove the plumbing and produce no metric.
 - **LoRA smoke test on CPU:** `pip install -r requirements-train.txt && make smoke` (about 30 seconds of training after the 1 GB model download).
-- **LoRA on a free GPU:** see "GPU run" below. The LoRA row in Results stays pending until that run has been done.
+- **LoRA on a free GPU:** see "GPU run" below. The LoRA row in Results comes from one such run.
 - **Refetch the data:** `scripts/find_exhibits.py` and `scripts/download_exhibits.py` read `SEC_USER_AGENT` (your name and email) from `.env` and stay under 7 requests a second. Passage picking and label merging are in `scripts/`; the labels themselves were written by hand.
 
 ## GPU run (LoRA fine-tune)
 
-No LoRA number exists yet. The steps below produce it. The notebook's time estimate (about 10 to 20 minutes on a T4 for the 0.5B model) has not been measured.
+The LoRA row in Results came from these steps on a Colab T4 (one run; scoring the test split took 305 s). The adapter zip is not committed; it is available on request. The notebook's training time estimate (about 10 to 20 minutes for the 0.5B model) has not been measured.
 
 1. Open https://colab.research.google.com, choose File, Open notebook, GitHub, enter `Srijareddy123/filing-extractor` and open `notebooks/train_lora_colab.ipynb`. (On Kaggle: import the notebook, then Settings, Accelerator, GPU T4.)
 2. Runtime, Change runtime type, T4 GPU. The repo is public, so the notebook's first cell clones it without a token.
@@ -93,6 +95,6 @@ git add results README.md docs && git commit -m "Add LoRA results from a GPU run
 
 - Label more passages, mainly margins and covenants, and have a second person label a sample to get an agreement score.
 - Handle pricing grids as tables instead of flattened text.
-- Run the GPU fine-tune on 0.5B and 1.5B, then compare with the LLM baseline on the same test passages.
+- Train 0.5B and 1.5B, record the model size in `results/`, and compare both with the LLM baseline on the same test passages.
 - Add retrieval so a whole exhibit can be processed, not just a chosen passage.
 - Calibrate: let the model say how sure it is, and route low-confidence fields to review.
